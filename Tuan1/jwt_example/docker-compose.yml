@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  resource-server:
+    build: .
+    image: jwt-resource-server:latest
+    container_name: jwt-resource-server
+    ports:
+      - "9090:9090"
+    environment:
+      - JAVA_OPTS=-Xms256m -Xmx512m

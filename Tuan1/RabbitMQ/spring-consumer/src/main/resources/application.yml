@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: spring-consumer
+  rabbitmq:
+    host: ${RABBITMQ_HOST:rabbitmq}
+    port: ${RABBITMQ_PORT:5672}
+    username: ${RABBITMQ_USER:user}
+    password: ${RABBITMQ_PASS:password}
+
+server:
+  port: 8081
+
+app:
+  queues:
+    order: ${ORDER_QUEUE:order_queue}
+    dlq: ${ORDER_QUEUE_DLQ:order_queue.dlq}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info

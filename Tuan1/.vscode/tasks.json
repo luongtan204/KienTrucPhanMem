@@ -1,0 +1,11 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "docker-compose-spring-up-build",
+			"type": "shell",
+			"command": "docker compose -f docker-compose.spring.yml up --build",
+			"isBackground": false
+		}
+	]
+}
