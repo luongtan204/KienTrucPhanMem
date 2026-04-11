@@ -1,0 +1,5 @@
+services:
+  web:
+    build: .
+    ports:
+      - "5009:5000" # Map host 5009 to container 5000

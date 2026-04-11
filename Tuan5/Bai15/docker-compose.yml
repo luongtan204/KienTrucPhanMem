@@ -1,0 +1,11 @@
+services:
+  redis_limited:
+    image: redis:latest
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50' # Giới hạn 50% CPU
+          memory: 512M # Giới hạn 512MB RAM
+        reservations:
+          cpus: '0.25'
+          memory: 256M

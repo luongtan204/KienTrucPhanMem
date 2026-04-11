@@ -1,0 +1,5 @@
+services:
+  web:
+    build: .
+    ports:
+      - "3013:80" # Map host 3013 to container 80
